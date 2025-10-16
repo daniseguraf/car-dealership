@@ -1,14 +1,14 @@
-import { IsOptional, IsString, IsUUID } from "class-validator";
+import { IsOptional, IsString, IsUUID } from 'class-validator'
 
 export class UpdateCarDto {
   @IsString({ message: 'The brand must be a string' })
   @IsOptional()
-  readonly brand?: string;
+  readonly brand?: string
 
   @IsString({ message: 'The model must be a string' })
   @IsOptional()
-  readonly model?: string;
+  readonly model?: string
 
   @IsUUID()
-  readonly id: string;
+  readonly id: string
 }

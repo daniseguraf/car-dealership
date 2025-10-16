@@ -6,10 +6,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint/eslint-plugin'],
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
-  ],
+  extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
   root: true,
   env: {
     node: true,
@@ -23,30 +20,25 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     'newline-before-return': 1,
     'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 1 }],
-       'padding-line-between-statements': [
-        'error',
-        {
-          blankLine: 'always',
-          next: '*',
-          prev: 'for',
-        },
-        {
-          blankLine: 'always',
-          next: '*',
-          prev: 'if',
-        },
+    'padding-line-between-statements': [
+      'error',
+      {
+        blankLine: 'always',
+        next: '*',
+        prev: 'for',
+      },
+      {
+        blankLine: 'always',
+        next: '*',
+        prev: 'if',
+      },
     ],
 
-
-      'prettier/prettier': [
-        'error',
-        {
-          endOfLine: 'auto',
-        },
-      ],
-
-      'react/jsx-curly-brace-presence': ['error'],
-      'react/react-in-jsx-scope': ['off'],
-      'simple-import-sort/exports': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
   },
-};
+}
